@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>BizCraft - Responsive Html5 Template</title>
+<style>
+
+    .containerr {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerr input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerr:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerr input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerr input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerr .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+</style>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{%load static%}
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static "plugins/bootstrap/bootstrap.min.css"%}">
+	<!-- FontAwesome -->
+  <link rel="stylesheet" href="{% static "plugins/fontawesome/font-awesome.min.css"%}">
+	<!-- Animation -->
+	<link rel="stylesheet" href="{% static "plugins/animate.css"%}">
+	<!-- Prettyphoto -->
+	<link rel="stylesheet" href="{% static "plugins/prettyPhoto.css"%}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static "plugins/owl/owl.carousel.css"%}">
+	<link rel="stylesheet" href="{% static "plugins/owl/owl.theme.css"%}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{% static "plugins/flex-slider/flexslider.css"%}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{% static "plugins/cd-hero/cd-hero.css"%}">
+	<!-- Style Swicther -->
+	<link id="style-switch" href="{% static "css/presets/preset3.css"%}" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="plugins/html5shiv.js"></script>
+      <script src="plugins/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Main Stylesheet -->
+  <link href="{% static "css/style.css"%}" rel="stylesheet">
+
+  <!--Favicon-->
+	<link rel="icon" href="{% static "img/favicon/favicon-32x32.png"%}" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "img/favicon/favicon-144x144.png"%}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "img/favicon/favicon-72x72.png"%}">
+	<link rel="apple-touch-icon-precomposed" href="{% static "img/favicon/favicon-54x54.png"%}">
+
+</head>
+
+<body>
+
+	
+	<div class="body-inner">
+<!-- Header start -->
+<header id="header" class="fixed-top header" role="banner">
+	<a class="navbar-brand navbar-bg" href="/home/"><img class="img-fluid float-right" src="{% static "images/logo.png"%}"  alt="logo"></a>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<button class="navbar-toggler ml-auto border-0 rounded-0 text-white" type="button" data-toggle="collapse"
+				data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+
+			<div class="collapse navbar-collapse text-center" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item  active">
+                  <a class="nav-link " href="/home/">
+                     Home
+                  </a>
+
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/about_/">
+                     About
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/loginpages/">
+                     tasks
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link " href="/logout/" >
+                     Signout
+                  </a>
+               </li>
+
+               <li class="nav-item">
+                  <a class="nav-link" href="#footer" >Contact</a>
+               </li>
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                     aria-expanded="false">
+                     Settings
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="/changepassword/">Change Password</a>
+                     <a class="dropdown-item" href="blog-item.html">Add Admin</a>
+                  </div>
+               </li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+<!--/ Header end -->
+
+<div id="banner-area">
+	<img src="{% static "images/banner/anima.jpg"%}" style=" width:1400px;height: 600px;"alt="" />
+	<div class="parallax-overlay"></div>
+	<!-- Subpage title start -->
+	<div class="banner-title-content">
+		<div class="text-center">
+			<h2>Add new donor</h2>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/home/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/loginpages/">Tasks</a></li>
+					<li class="breadcrumb-item text-white" aria-current="page">Add Donor</li>
+				</ol>
+			</nav>
+		</div>
+	</div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+
+<!-- Main container start -->
+<section id="main-container">
+	<div class="container">
+		<form action="/donorsubmit/" method="POST" style="text-align:center;">
+			<h4 style="margin-right:288px;">First Name</h4>
+			<input style="width:400px;" name="firstname" type="text" required><br><br>
+			<h4 style="margin-right:294px;">Last Name</h4>
+			<input style="width:400px;" name="lastname" type="text" required><br><br>
+			<h4 style="margin-right:340px;">Email</h4>
+			<input style="width:400px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" type="email"><br><br>
+			<h4 style="margin-right:257px;">Phone Number</h4>
+			<input style="width:400px;" name="phone" type="tel" required pattern="[0-9]{10}"><br><br>
+			<h4 style="margin-right:325px;">Gender</h4>
+			<input type="radio" id="gender1" name="gender" required value="Male">
+			<label style="margin-right:330px;" for="gender1">Male</label><br>
+			<input type="radio" id="gender2" name="gender" required value="Female">
+			<label  style="margin-right:316px;"  for="gender2">Female</label><br>
+
+
+
+			<h4 style="margin-right:263px;">Date of Camp</h4>
+			<input style="width:400px;" name="dob" type="date"><br><br>
+			<h4 style="margin-right:318px;">Country</h4>
+			<select  style=" width:400px;" id="country" required name="country">
+   <option value="Afganistan">Afghanistan</option>
+   <option value="Albania">Albania</option>
+   <option value="Algeria">Algeria</option>
+   <option value="American Samoa">American Samoa</option>
+   <option value="Andorra">Andorra</option>
+   <option value="Angola">Angola</option>
+   <option value="Anguilla">Anguilla</option>
+   <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+   <option value="Argentina">Argentina</option>
+   <option value="Armenia">Armenia</option>
+   <option value="Aruba">Aruba</option>
+   <option value="Australia">Australia</option>
+   <option value="Austria">Austria</option>
+   <option value="Azerbaijan">Azerbaijan</option>
+   <option value="Bahamas">Bahamas</option>
+   <option value="Bahrain">Bahrain</option>
+   <option value="Bangladesh">Bangladesh</option>
+   <option value="Barbados">Barbados</option>
+   <option value="Belarus">Belarus</option>
+   <option value="Belgium">Belgium</option>
+   <option value="Belize">Belize</option>
+   <option value="Benin">Benin</option>
+   <option value="Bermuda">Bermuda</option>
+   <option value="Bhutan">Bhutan</option>
+   <option value="Bolivia">Bolivia</option>
+   <option value="Bonaire">Bonaire</option>
+   <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+   <option value="Botswana">Botswana</option>
+   <option value="Brazil">Brazil</option>
+   <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+   <option value="Brunei">Brunei</option>
+   <option value="Bulgaria">Bulgaria</option>
+   <option value="Burkina Faso">Burkina Faso</option>
+   <option value="Burundi">Burundi</option>
+   <option value="Cambodia">Cambodia</option>
+   <option value="Cameroon">Cameroon</option>
+   <option value="Canada">Canada</option>
+   <option value="Canary Islands">Canary Islands</option>
+   <option value="Cape Verde">Cape Verde</option>
+   <option value="Cayman Islands">Cayman Islands</option>
+   <option value="Central African Republic">Central African Republic</option>
+   <option value="Chad">Chad</option>
+   <option value="Channel Islands">Channel Islands</option>
+   <option value="Chile">Chile</option>
+   <option value="China">China</option>
+   <option value="Christmas Island">Christmas Island</option>
+   <option value="Cocos Island">Cocos Island</option>
+   <option value="Colombia">Colombia</option>
+   <option value="Comoros">Comoros</option>
+   <option value="Congo">Congo</option>
+   <option value="Cook Islands">Cook Islands</option>
+   <option value="Costa Rica">Costa Rica</option>
+   <option value="Cote DIvoire">Cote DIvoire</option>
+   <option value="Croatia">Croatia</option>
+   <option value="Cuba">Cuba</option>
+   <option value="Curaco">Curacao</option>
+   <option value="Cyprus">Cyprus</option>
+   <option value="Czech Republic">Czech Republic</option>
+   <option value="Denmark">Denmark</option>
+   <option value="Djibouti">Djibouti</option>
+   <option value="Dominica">Dominica</option>
+   <option value="Dominican Republic">Dominican Republic</option>
+   <option value="East Timor">East Timor</option>
+   <option value="Ecuador">Ecuador</option>
+   <option value="Egypt">Egypt</option>
+   <option value="El Salvador">El Salvador</option>
+   <option value="Equatorial Guinea">Equatorial Guinea</option>
+   <option value="Eritrea">Eritrea</option>
+   <option value="Estonia">Estonia</option>
+   <option value="Ethiopia">Ethiopia</option>
+   <option value="Falkland Islands">Falkland Islands</option>
+   <option value="Faroe Islands">Faroe Islands</option>
+   <option value="Fiji">Fiji</option>
+   <option value="Finland">Finland</option>
+   <option value="France">France</option>
+   <option value="French Guiana">French Guiana</option>
+   <option value="French Polynesia">French Polynesia</option>
+   <option value="French Southern Ter">French Southern Ter</option>
+   <option value="Gabon">Gabon</option>
+   <option value="Gambia">Gambia</option>
+   <option value="Georgia">Georgia</option>
+   <option value="Germany">Germany</option>
+   <option value="Ghana">Ghana</option>
+   <option value="Gibraltar">Gibraltar</option>
+   <option value="Great Britain">Great Britain</option>
+   <option value="Greece">Greece</option>
+   <option value="Greenland">Greenland</option>
+   <option value="Grenada">Grenada</option>
+   <option value="Guadeloupe">Guadeloupe</option>
+   <option value="Guam">Guam</option>
+   <option value="Guatemala">Guatemala</option>
+   <option value="Guinea">Guinea</option>
+   <option value="Guyana">Guyana</option>
+   <option value="Haiti">Haiti</option>
+   <option value="Hawaii">Hawaii</option>
+   <option value="Honduras">Honduras</option>
+   <option value="Hong Kong">Hong Kong</option>
+   <option value="Hungary">Hungary</option>
+   <option value="Iceland">Iceland</option>
+   <option value="Indonesia">Indonesia</option>
+   <option value="India">India</option>
+   <option value="Iran">Iran</option>
+   <option value="Iraq">Iraq</option>
+   <option value="Ireland">Ireland</option>
+   <option value="Isle of Man">Isle of Man</option>
+   <option value="Israel">Israel</option>
+   <option value="Italy">Italy</option>
+   <option value="Jamaica">Jamaica</option>
+   <option value="Japan">Japan</option>
+   <option value="Jordan">Jordan</option>
+   <option value="Kazakhstan">Kazakhstan</option>
+   <option value="Kenya">Kenya</option>
+   <option value="Kiribati">Kiribati</option>
+   <option value="Korea North">Korea North</option>
+   <option value="Korea Sout">Korea South</option>
+   <option value="Kuwait">Kuwait</option>
+   <option value="Kyrgyzstan">Kyrgyzstan</option>
+   <option value="Laos">Laos</option>
+   <option value="Latvia">Latvia</option>
+   <option value="Lebanon">Lebanon</option>
+   <option value="Lesotho">Lesotho</option>
+   <option value="Liberia">Liberia</option>
+   <option value="Libya">Libya</option>
+   <option value="Liechtenstein">Liechtenstein</option>
+   <option value="Lithuania">Lithuania</option>
+   <option value="Luxembourg">Luxembourg</option>
+   <option value="Macau">Macau</option>
+   <option value="Macedonia">Macedonia</option>
+   <option value="Madagascar">Madagascar</option>
+   <option value="Malaysia">Malaysia</option>
+   <option value="Malawi">Malawi</option>
+   <option value="Maldives">Maldives</option>
+   <option value="Mali">Mali</option>
+   <option value="Malta">Malta</option>
+   <option value="Marshall Islands">Marshall Islands</option>
+   <option value="Martinique">Martinique</option>
+   <option value="Mauritania">Mauritania</option>
+   <option value="Mauritius">Mauritius</option>
+   <option value="Mayotte">Mayotte</option>
+   <option value="Mexico">Mexico</option>
+   <option value="Midway Islands">Midway Islands</option>
+   <option value="Moldova">Moldova</option>
+   <option value="Monaco">Monaco</option>
+   <option value="Mongolia">Mongolia</option>
+   <option value="Montserrat">Montserrat</option>
+   <option value="Morocco">Morocco</option>
+   <option value="Mozambique">Mozambique</option>
+   <option value="Myanmar">Myanmar</option>
+   <option value="Nambia">Nambia</option>
+   <option value="Nauru">Nauru</option>
+   <option value="Nepal">Nepal</option>
+   <option value="Netherland Antilles">Netherland Antilles</option>
+   <option value="Netherlands">Netherlands (Holland, Europe)</option>
+   <option value="Nevis">Nevis</option>
+   <option value="New Caledonia">New Caledonia</option>
+   <option value="New Zealand">New Zealand</option>
+   <option value="Nicaragua">Nicaragua</option>
+   <option value="Niger">Niger</option>
+   <option value="Nigeria">Nigeria</option>
+   <option value="Niue">Niue</option>
+   <option value="Norfolk Island">Norfolk Island</option>
+   <option value="Norway">Norway</option>
+   <option value="Oman">Oman</option>
+   <option value="Pakistan">Pakistan</option>
+   <option value="Palau Island">Palau Island</option>
+   <option value="Palestine">Palestine</option>
+   <option value="Panama">Panama</option>
+   <option value="Papua New Guinea">Papua New Guinea</option>
+   <option value="Paraguay">Paraguay</option>
+   <option value="Peru">Peru</option>
+   <option value="Phillipines">Philippines</option>
+   <option value="Pitcairn Island">Pitcairn Island</option>
+   <option value="Poland">Poland</option>
+   <option value="Portugal">Portugal</option>
+   <option value="Puerto Rico">Puerto Rico</option>
+   <option value="Qatar">Qatar</option>
+   <option value="Republic of Montenegro">Republic of Montenegro</option>
+   <option value="Republic of Serbia">Republic of Serbia</option>
+   <option value="Reunion">Reunion</option>
+   <option value="Romania">Romania</option>
+   <option value="Russia">Russia</option>
+   <option value="Rwanda">Rwanda</option>
+   <option value="St Barthelemy">St Barthelemy</option>
+   <option value="St Eustatius">St Eustatius</option>
+   <option value="St Helena">St Helena</option>
+   <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+   <option value="St Lucia">St Lucia</option>
+   <option value="St Maarten">St Maarten</option>
+   <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+   <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+   <option value="Saipan">Saipan</option>
+   <option value="Samoa">Samoa</option>
+   <option value="Samoa American">Samoa American</option>
+   <option value="San Marino">San Marino</option>
+   <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+   <option value="Saudi Arabia">Saudi Arabia</option>
+   <option value="Senegal">Senegal</option>
+   <option value="Seychelles">Seychelles</option>
+   <option value="Sierra Leone">Sierra Leone</option>
+   <option value="Singapore">Singapore</option>
+   <option value="Slovakia">Slovakia</option>
+   <option value="Slovenia">Slovenia</option>
+   <option value="Solomon Islands">Solomon Islands</option>
+   <option value="Somalia">Somalia</option>
+   <option value="South Africa">South Africa</option>
+   <option value="Spain">Spain</option>
+   <option value="Sri Lanka">Sri Lanka</option>
+   <option value="Sudan">Sudan</option>
+   <option value="Suriname">Suriname</option>
+   <option value="Swaziland">Swaziland</option>
+   <option value="Sweden">Sweden</option>
+   <option value="Switzerland">Switzerland</option>
+   <option value="Syria">Syria</option>
+   <option value="Tahiti">Tahiti</option>
+   <option value="Taiwan">Taiwan</option>
+   <option value="Tajikistan">Tajikistan</option>
+   <option value="Tanzania">Tanzania</option>
+   <option value="Thailand">Thailand</option>
+   <option value="Togo">Togo</option>
+   <option value="Tokelau">Tokelau</option>
+   <option value="Tonga">Tonga</option>
+   <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+   <option value="Tunisia">Tunisia</option>
+   <option value="Turkey">Turkey</option>
+   <option value="Turkmenistan">Turkmenistan</option>
+   <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+   <option value="Tuvalu">Tuvalu</option>
+   <option value="Uganda">Uganda</option>
+   <option value="United Kingdom">United Kingdom</option>
+   <option value="Ukraine">Ukraine</option>
+   <option value="United Arab Erimates">United Arab Emirates</option>
+   <option value="United States of America">United States of America</option>
+   <option value="Uraguay">Uruguay</option>
+   <option value="Uzbekistan">Uzbekistan</option>
+   <option value="Vanuatu">Vanuatu</option>
+   <option value="Vatican City State">Vatican City State</option>
+   <option value="Venezuela">Venezuela</option>
+   <option value="Vietnam">Vietnam</option>
+   <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+   <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+   <option value="Wake Island">Wake Island</option>
+   <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+   <option value="Yemen">Yemen</option>
+   <option value="Zaire">Zaire</option>
+   <option value="Zambia">Zambia</option>
+   <option value="Zimbabwe">Zimbabwe</option>
+</select><br><br>
+			<h4 style="margin-right:290px;">State/City</h4>
+			<input style="width:400px;" name="state" type="text" required><br><br>
+			<h4 style="margin-right:320px;">Camp ID</h4>
+			<input style="width:400px;" name="address" type="text" required><br><br>
+			<h4 style="margin-right:242px;">Aadhar Number</h4>
+			<input style="width:400px;" name="aadhar" placeholder="16 digit number" type="number" required><br><br>
+			<h4 style="margin-right:265px;">Blood Group</h4>
+			<select style=" width:400px;" id="blood" name="blood" required>
+   				<option value="A+">A+</option>
+				<option value="A-">A-</option>
+				<option value="B+">B+</option>
+				<option value="B-">B-</option>
+				<option value="O+">O+</option>
+				<option value="O-">O-</option>
+				<option value="AB+">AB+</option>
+				<option value="AB-">AB-</option>
+			</select><br><br>
+            <h4 style="margin-right:239px;">Quantity(in ml)</h4>
+			<input style="width:400px;" name="quantity" type="number" required><br><br>
+			<input style="width:200px;" type="submit" name="submitt" value="SUBMIT" onclick="myFunction()" 
+			class="btn btn-primary solid cd-btn"
+			>
+		</form>
+	</div>
+	<!--/ container end -->
+</section>
+<!--/ Main container end -->
+
+  <!-- Footer start -->
+  <footer id="footer" class="footer" style="background-image: url({% static "images/banner/foot2.jpg" %})" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 footer-widget">
+          <h3 class="widget-title">Recent Posts</h3>
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="https://www.news18.com/newstopics/blood-donation.html">Odisha Couple Gets Married by Taking Oath on Indian Constitution, Organising Blood Camp</a></h4>
+              <p class="post-meta">
+                <span class="author">Posted by John Doe</span>
+                <span class="post-meta-cat">in<a href="#"> Blog</a></span>
+              </p>
+            </div>
+          </div><!-- 1st Latest Post end -->
+
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="https://www.straitstimes.com/singapore/red-cross-appeals-for-more-blood-donations">Red Cross appeals for more blood donations</a></h4>
+              <p class="post-meta">
+                <span class="date"><i class="icon icon-calendar"></i> Mar 15, 2015</span>
+                <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">03</a></span>
+              </p>
+            </div>
+          </div><!-- 2nd Latest Post end -->
+
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="http://www.xinhuanet.com/english/2020-02/18/c_138795804.htm">Volunteers donate blood in Anhui
+</a></h4>
+              <p class="post-meta">
+                <span class="date"><i class="icon icon-calendar"></i> Apr 17, 2015</span>
+                <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">14</a></span>
+              </p>
+            </div>
+          </div><!-- 3rd Latest Post end -->
+
+        </div>
+        <!--/ End Recent Posts-->
+
+
+        <div class="col-md-4 col-sm-12 footer-widget">
+          <h3 class="widget-title"></h3>
+
+          <div class="img-gallery">
+            <div class="img-container">
+             
+            </div>
+          </div>
+        </div>
+        <!--/ end flickr -->
+
+        <div class="col-md-3 col-sm-12 footer-widget footer-about-us">
+          <h3 class="widget-title">About Blood Bank</h3>
+          <p>We want to serve those who are in need of blood,anywhere,anytime.</p>
+          <h4>Address</h4>
+          <p>New Delhi-110017</p>
+          <div class="row">
+            <div class="col-md-9">
+              <h4>Email:</h4>
+              <p>yushanttyagi@gmail.com</p>
+            </div>
+            <div class="col-md-6">
+              <h4>Phone No.</h4>
+              <p>+(91) 9393939393</p>
+            </div>
+          </div>
+          <form action="#" role="form">
+            <div class="input-group subscribe">
+              <input type="email" class="form-control" placeholder="Email Address" required="">
+              <span class="input-group-addon">
+                <button class="btn" type="submit"><i class="fa fa-envelope-o"> </i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <!--/ end about us -->
+
+      </div><!-- Row end -->
+    </div><!-- Container end -->
+  </footer><!-- Footer end -->
+
+	<!-- Copyright start -->
+	<section id="copyright" class="copyright angle">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <ul class="footer-social unstyled">
+	          <li>
+	            <a title="Twitter" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+	            </a>
+	            <a title="Facebook" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+	            </a>
+	            <a title="Google+" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+	            </a>
+	            <a title="linkedin" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+	            </a>
+	            <a title="Pinterest" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span>
+	            </a>
+	            <a title="Skype" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span>
+	            </a>
+	            <a title="Dribble" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-dribbble"></i></span>
+	            </a>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	    <!--/ Row end -->
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <div class="copyright-info">
+	          &copy; 2016 -2020 by Ministry of Health and Family Welfare <span>Designed by <a
+                 href="https://www.linkedin.com/in/yushanttyagi/">Yushant Tyagi</a></span>
+	        </div>
+	      </div>
+	    </div>
+	    <!--/ Row end -->
+	    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix position-fixed">
+	      <button class="btn btn-primary" onclick="scrollToTop()" title="Back to Top" ><i class="fa fa-angle-double-up"></i></button>
+	    </div>
+	  </div>
+	  <!--/ Container end -->
+	</section>
+	<!--/ Copyright end -->
+
+</div><!-- Body inner end -->
+
+<!-- jQuery -->
+<script src="{% static "plugins/jQuery/jquery.min.js" %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static "plugins/bootstrap/bootstrap.min.js" %}"></script>
+<!-- Style Switcher -->
+<script type="text/javascript" src="{% static "plugins/style-switcher.js" %}"></script>
+<!-- Owl Carousel -->
+<script type="text/javascript" src="{% static "plugins/owl/owl.carousel.js" %}"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="{% static "plugins/jquery.prettyPhoto.js"%}"></script>
+<!-- Bxslider -->
+<script type="text/javascript" src="{% static "plugins/flex-slider/jquery.flexslider.js"%}"></script>
+<!-- CD Hero slider -->
+<script type="text/javascript" src="{% static "plugins/cd-hero/cd-hero.js"%}"></script>
+<!-- Isotope -->
+<script type="text/javascript" src="{% static "plugins/isotope.js"%}"></script>
+<script type="text/javascript" src="{% static "plugins/ini.isotope.js"%}"></script>
+<!-- Wow Animation -->
+<script type="text/javascript" src="{% static "plugins/wow.min.js"%}"></script>
+<!-- Eeasing -->
+<script type="text/javascript" src="{% static "plugins/jquery.easing.1.3.js"%}"></script>
+<!-- Counter -->
+<script type="text/javascript" src="{% static "plugins/jquery.counterup.min.js"%}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" src="{% static "plugins/waypoints.min.js"%}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="{% static "plugins/google-map/gmap.js"%}"></script>
+
+<!-- Main Script -->
+<script src="{% static "js/script.js"%}"></script>
+<script>
+        {% if messages %}
+            {% for message in messages %}
+                alert('{{ message }}');
+            {% endfor %}
+        {% endif %}
+</script>
+<script>
+        function scrollToTop() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Blood Bank-The Donor's Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {% load static %}
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{%static "plugins/bootstrap/bootstrap.min.css" %}">
+	<!-- FontAwesome -->
+  <link rel="stylesheet" href="{%static "plugins/fontawesome/font-awesome.min.css" %}">
+	<!-- Animation -->
+	<link rel="stylesheet" href="{%static "plugins/animate.css" %}">
+	<!-- Prettyphoto -->
+	<link rel="stylesheet" href="{%static "plugins/prettyPhoto.css" %}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{%static "plugins/owl/owl.carousel.css" %}">
+	<link rel="stylesheet" href="{%static "plugins/owl/owl.theme.css" %}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{%static "plugins/flex-slider/flexslider.css" %}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{%static "plugins/cd-hero/cd-hero.css" %}">
+	<!-- Style Swicther -->
+	<link id="style-switch" href="{%static "css/presets/preset3.css" %}" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="plugins/html5shiv.js"></script>
+      <script src="plugins/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Main Stylesheet -->
+  <link href="{%static "css/style.css" %}" rel="stylesheet">
+  
+  <!--Favicon-->
+	<link rel="icon" href="{%static "img/favicon/favicon-32x32.png" %}" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{%static "img/favicon/favicon-144x144.png" %}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{%static "img/favicon/favicon-72x72.png" %}">
+	<link rel="apple-touch-icon-precomposed" href="{%static "img/favicon/favicon-54x54.png" %}">
+
+</head>
+
+<body>
+
+	<!-- Style switcher start -->
+	<div class="style-switch-wrapper">
+		<div class="style-switch-button">
+			<i class="fa fa-sliders"></i>
+		</div>
+		<h3>Style Options</h3>
+		<button id="preset1" class="btn btn-sm btn-primary"></button>
+		<button id="preset2" class="btn btn-sm btn-primary"></button>
+		<button id="preset3" class="btn btn-sm btn-primary"></button>
+		<button id="preset4" class="btn btn-sm btn-primary"></button>
+		<button id="preset5" class="btn btn-sm btn-primary"></button>
+		<button id="preset6" class="btn btn-sm btn-primary"></button>
+		<br/><br/>
+		<a class="btn btn-sm btn-primary close-styler float-right">Close X</a>
+	</div>
+	<!-- Style switcher end -->
+
+	<div class="body-inner">
+<!-- Header start -->
+<header id="header" class="fixed-top header" role="banner">
+	<a class="navbar-brand navbar-bg" href="/"><img class="img-fluid float-right" src="{%static "images/logo.png" %}"  alt="logo"></a>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<button class="navbar-toggler ml-auto border-0 rounded-0 text-white" type="button" data-toggle="collapse"
+				data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+
+			<div class="collapse navbar-collapse text-center" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item  active">
+						<a class="nav-link " href="/">
+							Home
+						</a>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/about/">
+
+							About
+						</a>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="/loginpage/" >
+
+							Login
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#footer" >Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+<!--/ Header end -->
+
+<div id="banner-area">
+	<img class="mySlides w3-animate-right" style=" width:1400px;height: 700px;" src="{% static "images/banner/tasks.jpg" %}" alt="" />
+	<img class="mySlides w3-animate-left" style=" width:1400px;height: 700px;" src="{% static "images/banner/hhhh.jpg" %}" alt="" />
+	<img class="mySlides w3-animate-right" style=" width:1400px;height: 700px;" src="{% static "images/banner/hhhh2.jpg" %}" alt="" />
+	<img class="mySlides w3-animate-left" style=" width:1400px;height: 700px;" src="{% static "images/slider/bloodb3.jpg" %}" alt="" />
+	<!-- Subpage title start -->
+	<div class="banner-title-content">
+		<div class="text-center">
+			<h2>About Us</h2>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item text-white" aria-current="page">About Us</li>
+				</ol>
+			</nav>
+		</div>
+	</div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+
+<!-- Main container start -->
+<section id="main-container">
+	<div class="container">
+
+		<!-- Our Profile -->
+		<div class="row">
+			<div class="col-md-12 heading">
+				<span class="title-icon classic float-left"><i class="fa fa-suitcase"></i></span>
+				<h2 class="title classic">Our Profile</h2>
+			</div>
+		</div><!-- Title row end -->
+
+		<div class="row landing-tab">
+			<div class="col-md-3 col-sm-5">
+				<div class="nav flex-column nav-pills border-right" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="animated fadeIn nav-link py-4 active d-flex align-items-center" data-toggle="pill" href="#tab_1"
+						role="tab" aria-selected="true">
+						<i class="fa fa-info-circle mr-4"></i>
+						<span class="h4 mb-0 font-weight-bold">Who Are We</span>
+					</a>
+					<a class="animated fadeIn nav-link py-4 d-flex align-items-center" data-toggle="pill" href="#tab_2" role="tab"
+						aria-selected="true">
+						<i class="fa fa-briefcase mr-4"></i>
+						<span class="h4 mb-0 font-weight-bold">OUR ORGANISATION</span>
+					</a>
+					<a class="animated fadeIn nav-link py-4 d-flex align-items-center" data-toggle="pill" href="#tab_3" role="tab"
+						aria-selected="true">
+						<i class="fa fa-cogs mr-4"></i>
+						<span class="h4 mb-0 font-weight-bold">What We Do</span>
+					</a>
+					<a class="animated fadeIn nav-link py-4 d-flex align-items-center" data-toggle="pill" href="#tab_5" role="tab"
+						aria-selected="true">
+						<i class="fa fa-support mr-4"></i>
+						<span class="h4 mb-0 font-weight-bold">Dedicated Support</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-9 col-sm-7">
+				<div class="tab-content" id="v-pills-tabContent">
+					<div class="tab-pane pl-sm-5 fade show active animated fadeInLeft" id="tab_1" role="tabpanel">
+						<i class="fa fa-trophy icon-xl text-primary mb-4"></i>
+						<h3>We Are Award Winning Organisation</h3>
+						<p>We work day and night to help people requiring blood to survive.Our services are very fast and we are trying to make it faster.</p>
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_2" role="tabpanel">
+						<i class="fa fa-briefcase icon-xl text-primary mb-4"></i>
+						<h3>We Are Expanding Soon</h3>
+						<p>Serving in a country like India has been a big challenge for us.But bigger the challenge, the more you learn. India has taught us a lot and has helped us grow with a constant pace. We want to expand our services to other nations around the globe. We are in touch with other organisations. Soon the task of expanding will begin.</p>
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_3" role="tabpanel">
+						<i class="fa fa-cogs icon-xl text-primary mb-4"></i>
+						<h3>We serve those in the need of blood</h3>
+						<p>We are able to serve those in the need of blood for the past 5 years.We want to continue this work and our aim is to reach out every single soul in the need of blood.Blood is life,and we deliver that life to you on time.</p>
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_4" role="tabpanel">
+						<i class="fa fa-pagelines icon-xl text-primary mb-4"></i>
+						<h3>Clean and Modern Design</h3>
+						<p>Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis,
+							gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+							sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend.</p>
+					</div>
+					<div class="tab-pane pl-sm-5 fade animated fadeInLeft" id="tab_5" role="tabpanel">
+						<i class="fa fa-support icon-xl text-primary mb-4"></i>
+						<h3>24/7 Dedicated Support</h3>
+						<p>Our success is cause of the collaborations we are having with various government organisations.Different state governments help us by proving funds.In return we are able to serve their states and districts.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ Content row end -->
+	</div>
+	<!--/ 1st container end -->
+
+
+	<div class="gap-60"></div>
+
+
+	<!-- Counter Strat -->
+	<div class="ts_counter_bg parallax parallax2">
+		<div class="parallax-overlay"></div>
+		<div class="container">
+			<div class="row wow fadeInLeft text-center">
+				<div class="facts col-md-3 col-sm-6">
+					<span class="facts-icon"><i class="fa fa-user"></i></span>
+					<div class="facts-num">
+						<span class="counter">1200</span>
+					</div>
+					<h3>Donors</h3>
+				</div>
+
+				<div class="facts col-md-3 col-sm-6">
+					<span class="facts-icon"><i class="fa fa-institution"></i></span>
+					<div class="facts-num">
+						<span class="counter">6000</span>
+					</div>
+					<h3>Camps Held</h3>
+				</div>
+
+				<div class="facts col-md-3 col-sm-6">
+					<span class="facts-icon"><i class="fa fa-suitcase"></i></span>
+					<div class="facts-num">
+						<span class="counter">869</span>
+					</div>
+					<h3>Projects</h3>
+				</div>
+
+				<div class="facts col-md-3 col-sm-6">
+					<span class="facts-icon"><i class="fa fa-trophy"></i></span>
+					<div class="facts-num">
+						<span class="counter">10000</span>
+					</div>
+					<h3>People helped</h3>
+				</div>
+
+				<div class="gap-40"></div>
+
+				<div class="col-12 text-center"><a href="#" class="btn btn-primary solid">See Our Portfolio</a></div>
+
+			</div>
+			<!--/ row end -->
+		</div>
+		<!--/ Container end -->
+	</div>
+	<!--/ Counter end -->
+
+	<div class="gap-60"></div>
+
+
+	<div class="container">
+		<!-- 2nd container start -->
+
+		<!-- Team start -->
+		<div class="team">
+
+			<div class="row">
+				<div class="col-md-12 heading">
+					<span class="title-icon classic float-left"><i class="fa fa-weixin"></i></span>
+					<h2 class="title classic">Meet with our Team</h2>
+				</div>
+			</div><!-- Title row end -->
+
+			<div class="row text-center">
+				<div class="col-md-3 col-sm-6">
+					<div class="team wow slideInLeft">
+						<div class="img-hexagon">
+							<img src="{% static "images/team/shirt2.jpg"%}" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>Yushant Tyagi</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="https://www.facebook.com/yushant.tyagi"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="https://www.linkedin.com/in/yushanttyagi/"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 1 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team wow slideInLeft">
+						<div class="img-hexagon">
+							<img src="{% static "images/team/team2.jpg" %}" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>Robert Aleska</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 2 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team wow slideInRight">
+						<div class="img-hexagon">
+							<img src="{% static "images/team/team3.jpg" %}" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>Taline Voski</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 3 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team animate wow slideInRight">
+						<div class="img-hexagon">
+							<img src="{% static "images/team/team4.jpg" %}" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>Alban Spencer</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 4 end -->
+			</div>
+			<!--/ Content row end -->
+
+		</div><!-- Team end -->
+
+	</div><!-- 2nd container end -->
+</section>
+<!--/ Main container end -->
+
+  <!-- Footer start -->
+  <footer id="footer" class="footer" style="background-image: url({% static "images/banner/foot2.jpg" %})" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 footer-widget">
+          <h3 class="widget-title">Recent Posts</h3>
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="https://www.news18.com/newstopics/blood-donation.html">Odisha Couple Gets Married by Taking Oath on Indian Constitution, Organising Blood Camp</a></h4>
+              <p class="post-meta">
+                <span class="author">Posted by John Doe</span>
+                <span class="post-meta-cat">in<a href="#"> Blog</a></span>
+              </p>
+            </div>
+          </div><!-- 1st Latest Post end -->
+
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="https://www.straitstimes.com/singapore/red-cross-appeals-for-more-blood-donations">Red Cross appeals for more blood donations</a></h4>
+              <p class="post-meta">
+                <span class="date"><i class="icon icon-calendar"></i> Mar 15, 2015</span>
+                <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">03</a></span>
+              </p>
+            </div>
+          </div><!-- 2nd Latest Post end -->
+
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="http://www.xinhuanet.com/english/2020-02/18/c_138795804.htm">Volunteers donate blood in Anhui
+</a></h4>
+              <p class="post-meta">
+                <span class="date"><i class="icon icon-calendar"></i> Apr 17, 2015</span>
+                <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">14</a></span>
+              </p>
+            </div>
+          </div><!-- 3rd Latest Post end -->
+
+        </div>
+        <!--/ End Recent Posts-->
+
+
+        <div class="col-md-4 col-sm-12 footer-widget">
+          <h3 class="widget-title"></h3>
+
+          <div class="img-gallery">
+            <div class="img-container">
+             
+            </div>
+          </div>
+        </div>
+        <!--/ end flickr -->
+
+        <div class="col-md-3 col-sm-12 footer-widget footer-about-us">
+          <h3 class="widget-title">About Blood Bank</h3>
+          <p>We want to serve those who are in need of blood,anywhere,anytime.</p>
+          <h4>Address</h4>
+          <p>New Delhi-110017</p>
+          <div class="row">
+            <div class="col-md-9">
+              <h4>Email:</h4>
+              <p>yushanttyagi@gmail.com</p>
+            </div>
+            <div class="col-md-6">
+              <h4>Phone No.</h4>
+              <p>+(91) 9393939393</p>
+            </div>
+          </div>
+          <form action="#" role="form">
+            <div class="input-group subscribe">
+              <input type="email" class="form-control" placeholder="Email Address" required="">
+              <span class="input-group-addon">
+                <button class="btn" type="submit"><i class="fa fa-envelope-o"> </i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <!--/ end about us -->
+
+      </div><!-- Row end -->
+    </div><!-- Container end -->
+  </footer><!-- Footer end -->
+
+
+	<!-- Copyright start -->
+	<section id="copyright" class="copyright angle">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <ul class="footer-social unstyled">
+	          <li>
+	            <a title="Twitter" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+	            </a>
+	            <a title="Facebook" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+	            </a>
+	            <a title="Google+" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+	            </a>
+	            <a title="linkedin" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+	            </a>
+	            <a title="Pinterest" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span>
+	            </a>
+	            <a title="Skype" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span>
+	            </a>
+	            <a title="Dribble" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-dribbble"></i></span>
+	            </a>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	    <!--/ Row end -->
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <div class="copyright-info">
+	         &copy; 2016 -2020 by Ministry of Health and Family Welfare <span>Designed by <a
+	              href="https://www.linkedin.com/in/yushanttyagi/">Yushant Tyagi</a></span>
+	        </div>
+	      </div>
+	    </div>
+	    <!--/ Row end -->
+	    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix position-fixed">
+	      <button class="btn btn-primary" onclick="scrollToTop()" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+	    </div>
+	  </div>
+	  <!--/ Container end -->
+	</section>
+	<!--/ Copyright end -->
+
+</div><!-- Body inner end -->
+
+<!-- jQuery -->
+<script src="{% static "plugins/jQuery/jquery.min.js" %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static "plugins/bootstrap/bootstrap.min.js" %}"></script>
+<!-- Style Switcher -->
+<script type="text/javascript" src="{% static "plugins/style-switcher.js" %}"></script>
+<!-- Owl Carousel -->
+<script type="text/javascript" src="{% static "plugins/owl/owl.carousel.js" %}"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="{% static "plugins/jquery.prettyPhoto.js" %}"></script>
+<!-- Bxslider -->
+<script type="text/javascript" src="{% static "plugins/flex-slider/jquery.flexslider.js" %}"></script>
+<!-- CD Hero slider -->
+<script type="text/javascript" src="{% static "plugins/cd-hero/cd-hero.js" %}"></script>
+<!-- Isotope -->
+<script type="text/javascript" src="{% static "plugins/isotope.js" %}"></script>
+<script type="text/javascript" src="{% static "plugins/ini.isotope.js" %}"></script>
+<!-- Wow Animation -->
+<script type="text/javascript" src="{% static "plugins/wow.min.js" %}"></script>
+<!-- Eeasing -->
+<script type="text/javascript" src="{% static "plugins/jquery.easing.1.3.js" %}"></script>
+<!-- Counter -->
+<script type="text/javascript" src="{% static "plugins/jquery.counterup.min.js" %}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" src="{% static "plugins/waypoints.min.js" %}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="{% static "plugins/google-map/gmap.js" %}"></script>
+
+<!-- Main Script -->
+<script src="{% static "js/script.js" %}"></script>
+<script>
+        function scrollToTop() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3500);    
+}
+</script>
+</body>
+
+</html>

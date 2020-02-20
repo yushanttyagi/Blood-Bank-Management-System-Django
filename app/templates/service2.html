@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Blood Bank-The Donor's Hub</title>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #FF7070;
+  color: white;
+}
+</style>
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {% load static %}
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static "plugins/bootstrap/bootstrap.min.css" %}">
+	<!-- FontAwesome -->
+  <link rel="stylesheet" href="{% static "plugins/fontawesome/font-awesome.min.css" %}">
+	<!-- Animation -->
+	<link rel="stylesheet" href="{% static "plugins/animate.css" %}">
+	<!-- Prettyphoto -->
+	<link rel="stylesheet" href="{% static "plugins/prettyPhoto.css" %}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static "plugins/owl/owl.carousel.css" %}">
+	<link rel="stylesheet" href="{% static "plugins/owl/owl.theme.css" %}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{% static "plugins/flex-slider/flexslider.css" %}">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="{% static "plugins/cd-hero/cd-hero.css" %}">
+	<!-- Style Swicther -->
+	<link id="style-switch" href="{% static "css/presets/preset3.css" %}" media="screen" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="plugins/html5shiv.js"></script>
+      <script src="plugins/respond.min.js"></script>
+    <![endif]-->
+
+  <!-- Main Stylesheet -->
+  <link href="{% static "css/style.css" %}" rel="stylesheet">
+  
+  <!--Favicon-->
+	<link rel="icon" href="{% static "img/favicon/favicon-32x32.png" %}" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static "img/favicon/favicon-144x144.png" %}">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "img/favicon/favicon-72x72.png" %}">
+	<link rel="apple-touch-icon-precomposed" href="{% static "img/favicon/favicon-54x54.png" %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static "images/icons/favicon.ico" %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "fonts/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/animate/animate.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/select2/select2.min.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "vendor/perfect-scrollbar/perfect-scrollbar.css" %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static "css/util.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}">
+<!--===============================================================================================-->
+</head>
+
+<body>
+
+	
+
+	<div class="body-inner">
+
+<!-- Header start -->
+<header id="header" class="fixed-top header" role="banner">
+	<a class="navbar-brand navbar-bg" href="/home/"><img class="img-fluid float-right" src="{%static "images/logo.png"%}"  alt="logo"></a>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<button class="navbar-toggler ml-auto border-0 rounded-0 text-white" type="button" data-toggle="collapse"
+				data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+
+			<div class="collapse navbar-collapse text-center" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item  active">
+						<a class="nav-link " href="/home/">
+							Home
+						</a>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/about_/">
+
+							About
+						</a>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/loginpages/">
+							tasks
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="/logout/" >
+							signout
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="#footer" >contact</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Settings
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="/changepassword/">Change Password</a>
+							<a class="dropdown-item" href="/addadmin/">Add Admin</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+<!--/ Header end -->
+<div id="banner-area">
+	<img src="{% static "images/banner/anima.jpg"%}" style=" width:1400px;height: 600px;"alt="" />
+	<div class="parallax-overlay"></div>
+	<!-- Subpage title start -->
+	<div class="banner-title-content">
+		<div class="text-center">
+			<h2>Donor Report</h2>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/home/">Home</a></li>
+          			<li class="breadcrumb-item"><a href="/loginpages/">Tasks</a></li>
+					<li class="breadcrumb-item text-white" aria-current="page">Donor Report</li>
+				</ol>
+			</nav>
+		</div>
+	</div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+
+<!-- Main container start -->
+<section id="main-container">
+	<div class="container">
+		<!-- Services -->
+		<div class="row">
+			<div class="col-md-12 heading">
+				<span class="title-icon classic float-left"><i class="fa fa-cogs"></i></span>
+				<h2 class="title classic">Statistics</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+				<div class="service-content">
+					<div id="chart-container"></div>
+				</div>
+			</div>
+&nbsp;
+		&nbsp;&nbsp;
+			<div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".11s">
+				<div class="service-content">
+					
+					<div id="chart-container2" style="margin-left: 200px;" ></div>
+					</div>
+			</div></div>
+</div>
+	<div class="gap-60"></div>
+
+	
+	<div class="gap-60"></div>
+
+
+	<div class="container">
+		<!-- 2nd container start -->
+
+		<!-- Pricing table start -->
+		<div id="pricing" class="pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 heading">
+						<span class="title-icon classic float-left"><i class="fa fa-university"></i></span>
+						<h2 class="title classic">Filtering Table</h2><br>
+						<h5 class="title classic">Query the Database here</h5>
+					</div>
+				</div><!-- Title row end -->
+				<div class="dropdown">
+  <form action="/displaydonor2/" id="form"method="POST">
+  <label for="filter" style="margin-left:30px;">Choose Filter:</label>
+
+<select onchange="myFunctions()"  rquired name="filter" id="filter">
+  <option value="blood">Blood Type</option>
+  <option value="name">Name</option>
+  <option value="date">Date</option>
+  <option value="cid">Camp ID</option>
+</select>
+<input type="text" rquired id="Filt" name="filt" placeholder="enter filter name" style="margin-left:250px;" required>
+<input type="text" name="nor" rquired placeholder="number of records('all' to display all of them)" style="margin-left:60px;width:350px;" required>
+<div><p style="color:white;">ssss</p></div>
+<input type="submit" name="submitt" value="SUBMIT"class="btn btn-primary solid cd-btn" style="margin-left:474px;width:200px;background-color: #FF7070;">
+</form>
+
+
+
+					<div class="limiter">
+
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<table style="overflow-y:scroll;" id="customers" data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th  class="column100 column1" data-column="column2">Name</th>
+								<th class="column100 column2" data-column="column3">Surname</th>
+								<th class="column100 column3" data-column="column4">Email</th>
+								<th class="column100 column4" data-column="column5">Phone</th>
+								<th class="column100 column5" data-column="column6">Gender</th>
+								<th class="column100 column6" data-column="column7">Date Of Camp</th>
+								<th class="column100 column7" data-column="column8">Country</th>
+								<th class="column100 column8" data-column="column8">State</th>
+								<th class="column100 column8" data-column="column8">Camp ID</th>
+								<th class="column100 column8" data-column="column8">Aadhar</th>
+								<th class="column100 column8" data-column="column8">Blood Type</th>
+								<th class="column100 column8" data-column="column8">Amount Donated(mL)</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for i in lisst %}
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{i.first}}</td>
+								<td class="column100 column2" data-column="column2">{{i.last}}</td>&nbsp;
+								<td class="column100 column3" data-column="column3">{{i.email}}</td>
+								<td class="column100 column4" data-column="column4">{{i.phone}}</td>
+								<td class="column100 column5" data-column="column5">{{i.gender}}</td>
+								<td class="column100 column6" data-column="column6">{{i.dob}}</td>
+								<td class="column100 column7" data-column="column7">{{i.country}}</td>
+								<td class="column100 column8" data-column="column8">{{i.state}}</td>
+								<td class="column100 column5" data-column="column5">{{i.address}}</td>
+								<td class="column100 column6" data-column="column6">{{i.aadhar}}</td>
+								<td class="column100 column7" data-column="column7">{{i.blood}}</td>
+								<td class="column100 column8" data-column="column8">{{i.quantity}}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+				<!--/ Content row end -->
+			</div>
+			<!--/  Container end-->
+		</div>
+		<!--/ Pricing table end -->
+
+	</div><!-- 2nd container end -->
+</section>
+<!--/ Main container end -->
+					
+<section class="call-to-action">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Join Us and help those in need</h3>
+				<a href="#" class="float-right btn btn-primary white">Donate Now</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+  <!-- Footer start -->
+  <footer id="footer" class="footer" style="background-image: url({% static "images/banner/foot2.jpg" %})" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 footer-widget">
+          <h3 class="widget-title">Recent Posts</h3>
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="https://www.news18.com/newstopics/blood-donation.html">Odisha Couple Gets Married by Taking Oath on Indian Constitution, Organising Blood Camp</a></h4>
+              <p class="post-meta">
+                <span class="author">Posted by John Doe</span>
+                <span class="post-meta-cat">in<a href="#"> Blog</a></span>
+              </p>
+            </div>
+          </div><!-- 1st Latest Post end -->
+
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="https://www.straitstimes.com/singapore/red-cross-appeals-for-more-blood-donations">Red Cross appeals for more blood donations</a></h4>
+              <p class="post-meta">
+                <span class="date"><i class="icon icon-calendar"></i> Mar 15, 2015</span>
+                <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">03</a></span>
+              </p>
+            </div>
+          </div><!-- 2nd Latest Post end -->
+
+          <div class="latest-post-items media">
+            <div class="latest-post-content media-body">
+              <h4><a target="_blank" href="http://www.xinhuanet.com/english/2020-02/18/c_138795804.htm">Volunteers donate blood in Anhui
+</a></h4>
+              <p class="post-meta">
+                <span class="date"><i class="icon icon-calendar"></i> Apr 17, 2015</span>
+                <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">14</a></span>
+              </p>
+            </div>
+          </div><!-- 3rd Latest Post end -->
+
+        </div>
+        <!--/ End Recent Posts-->
+
+
+        <div class="col-md-4 col-sm-12 footer-widget">
+          <h3 class="widget-title"></h3>
+
+          <div class="img-gallery">
+            <div class="img-container">
+             
+            </div>
+          </div>
+        </div>
+        <!--/ end flickr -->
+
+        <div class="col-md-3 col-sm-12 footer-widget footer-about-us">
+          <h3 class="widget-title">About Blood Bank</h3>
+          <p>We want to serve those who are in need of blood,anywhere,anytime.</p>
+          <h4>Address</h4>
+          <p>New Delhi-110017</p>
+          <div class="row">
+            <div class="col-md-9">
+              <h4>Email:</h4>
+              <p>yushanttyagi@gmail.com</p>
+            </div>
+            <div class="col-md-6">
+              <h4>Phone No.</h4>
+              <p>+(91) 9393939393</p>
+            </div>
+          </div>
+          <form action="#" role="form">
+            <div class="input-group subscribe">
+              <input type="email" class="form-control" placeholder="Email Address" required="">
+              <span class="input-group-addon">
+                <button class="btn" type="submit"><i class="fa fa-envelope-o"> </i></button>
+              </span>
+            </div>
+          </form>
+        </div>
+        <!--/ end about us -->
+
+      </div><!-- Row end -->
+    </div><!-- Container end -->
+  </footer><!-- Footer end -->
+
+	<!-- Copyright start -->
+	<section id="copyright" class="copyright angle">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <ul class="footer-social unstyled">
+	          <li>
+	            <a title="Twitter" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+	            </a>
+	            <a title="Facebook" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+	            </a>
+	            <a title="Google+" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+	            </a>
+	            <a title="linkedin" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+	            </a>
+	            <a title="Pinterest" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span>
+	            </a>
+	            <a title="Skype" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span>
+	            </a>
+	            <a title="Dribble" href="#">
+	              <span class="icon-pentagon wow bounceIn"><i class="fa fa-dribbble"></i></span>
+	            </a>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	    <!--/ Row end -->
+	    <div class="row">
+	      <div class="col-md-12 text-center">
+	        <div class="copyright-info">
+	          &copy; 2016 -2020 by Ministry of Health and Family Welfare <span>Designed by <a
+	              href="https://themefisher.com">Yushant Tyagi</a></span>
+	        </div>
+	      </div>
+	    </div>
+	    <!--/ Row end -->
+	    <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix position-fixed">
+	      <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+	    </div>
+	  </div>
+	  <!--/ Container end -->
+	</section>
+	<!--/ Copyright end -->
+
+</div><!-- Body inner end -->
+
+<!-- jQuery -->
+<script src="{% static "plugins/jQuery/jquery.min.js" %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static "plugins/bootstrap/bootstrap.min.js" %}"></script>
+<!-- Style Switcher -->
+<script type="text/javascript" src="{% static "plugins/style-switcher.js" %}"></script>
+<!-- Owl Carousel -->
+<script type="text/javascript" src="{% static "plugins/owl/owl.carousel.js" %}"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="{% static "plugins/jquery.prettyPhoto.js" %}"></script>
+<!-- Bxslider -->
+<script type="text/javascript" src="{% static "plugins/flex-slider/jquery.flexslider.js" %}"></script>
+<!-- CD Hero slider -->
+<script type="text/javascript" src="{% static "plugins/cd-hero/cd-hero.js" %}"></script>
+<!-- Isotope -->
+<script type="text/javascript" src="{% static "plugins/isotope.js" %}"></script>
+<script type="text/javascript" src="{% static "plugins/ini.isotope.js" %}"></script>
+<!-- Wow Animation -->
+<script type="text/javascript" src="{% static "plugins/wow.min.js" %}"></script>
+<!-- Eeasing -->
+<script type="text/javascript" src="{% static "plugins/jquery.easing.1.3.js" %}"></script>
+<!-- Counter -->
+<script type="text/javascript" src="{% static "plugins/jquery.counterup.min.js" %}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" src="{% static "plugins/waypoints.min.js" %}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="{% static "plugins/google-map/gmap.js" %}"></script>
+
+<!-- Main Script -->
+<script src="{% static "js/script.js" %}"></script>
+<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+	<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+	<script type="text/javascript">
+		FusionCharts.ready(function(){
+			var chartObj = new FusionCharts({
+    type: 'pie2d',
+    renderAt: 'chart-container',
+    width: '550',
+    height: '350',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "caption": "Blood Donated by each donor",
+            "subCaption": "useDataPlotColorForLabelsdated in real time",
+            "numberPrefix": "$",
+            "showPercentInTooltip": "0",
+            "decimals": "1",
+            "useDataPlotColorForLabels": "1",
+            //Theme
+            "theme": "fusion"
+        },
+        "data": [{
+            "label": "AB-",
+            "value": "{{dictionary.abp}}"
+        }, {
+            "label": "AB+",
+            "value": "{{dictionary.abp}}"
+        },{
+        	"label":"B-",
+        	"value":"{{dictionary.bn}}"
+        },{
+        	"label":"B+",
+        	"value":"{{dictionary.bp}}"
+        },{
+        	"label":"O-",
+        	"value":"{{dictionary.on}}"
+        },{
+        	"label":"O+",
+        	"value":"{{dictionary.op}}"
+        },{
+        	"label":"A-",
+        	"value":"{{dictionary.an}}"
+        },{
+        	"label":"A+",
+        	"value":"{{dictionary.ap}}"
+        }
+        ]
+    }
+}
+);
+			chartObj.render();
+		});
+	</script>
+
+
+	<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+	<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+	<script type="text/javascript">
+		FusionCharts.ready(function(){
+			var chartObj = new FusionCharts({
+    type: 'column3d',
+    renderAt: 'chart-container2',
+    width: '550',
+    height: '350',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+        	"xaxisname": "Blood Type",
+    		"yaxisname": "Litres",
+    		"labelDisplay": "rotate",
+        	"slantLabel": "1",
+            "caption": "Split of revenue by product categories",
+            "subCaption": "Last year",
+            "numberPrefix": "",
+            "showPercentInTooltip": "0",
+            "decimals": "1",
+            "useDataPlotColorForLabels": "1",
+            //Theme
+            "theme": "fusion"
+        },
+        "data": [{
+            "label": "AB-",
+            "value": "{{dictionary.abp}}"
+        }, {
+            "label": "B+",
+            "value": "{{dictionary.bp}}"
+        },{
+        	"label":"B-",
+        	"value":"{{dictionary.bn}}"
+        },{
+        	"label":"AB-",
+        	"value":"{{dictionary.abn}}"
+        },{
+        	"label":"O-",
+        	"value":"{{dictionary.on}}"
+        },{
+        	"label":"O-",
+        	"value":"{{dictionary.op}}"
+        },{
+        	"label":"A-",
+        	"value":"{{dictionary.an}}"
+        },{
+        	"label":"A+",
+        	"value":"{{dictionary.ap}}"
+        }
+        ]
+    }
+}
+);
+			chartObj.render();
+		});
+	</script>
+	
+<script>
+function myFunctions() {
+  var x = document.getElementById("filter").value;
+  if(x=="date"){
+  	document.getElementById("Filt").type="Date";
+  }
+  if(x!="date"){
+  	document.getElementById("Filt").type="text";
+  }
+}
+</script>
+</body>
+
+</html>
